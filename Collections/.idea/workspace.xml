@@ -2,15 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e70da84-1a4e-41c3-b68e-1005d922f4d8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/description.html" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/description.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/project-template.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/project-template.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Collections.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Collections.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Collections/META-INF/Collections.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Collections/META-INF/Collections.kotlin_module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/1million.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/1million.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/prideandprejudice.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/prideandprejudice.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sampleACAD.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sampleACAD.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/wordlist.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/wordlist.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/words_alpha.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/words_alpha.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/collections/CollectionExercises.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/collections/CollectionExercises.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/collections/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/collections/Input.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/collections/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/collections/Main.java" afterDir="false" />
     </list>
@@ -25,44 +32,7 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/collections/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
-              <caret line="71" column="55" selection-start-line="71" selection-start-column="55" selection-end-line="71" selection-end-column="55" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/collections/Input.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="36" column="34" lean-forward="true" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/collections/CollectionExercises.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="57" lean-forward="true" selection-start-line="14" selection-start-column="57" selection-end-line="14" selection-end-column="57" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -96,10 +66,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1686" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="974" />
-    <option name="height" value="1047" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -108,18 +78,12 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="Collections" type="b2602c69:ProjectViewProjectNode" />
               <item name="Collections" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Collections" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Collections" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Collections" type="b2602c69:ProjectViewProjectNode" />
@@ -136,13 +100,14 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../cs246/teach03" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -197,17 +162,19 @@
       <updated>1556925558525</updated>
       <workItem from="1556925559922" duration="4779000" />
       <workItem from="1557004555688" duration="28187000" />
+      <workItem from="1557203583165" duration="19000" />
+      <workItem from="1557283721329" duration="2302000" />
+      <workItem from="1557364058885" duration="64000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32966000" />
+    <option name="totallyTimeSpent" value="35351000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25266525" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12100213" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -242,20 +209,8 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/collections/PLayingCard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="39" lean-forward="true" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/collections/collectionTypes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/collections/PLayingCard.java" />
+    <entry file="file://$PROJECT_DIR$/src/collections/collectionTypes.java" />
     <entry file="file://$PROJECT_DIR$/resources/wordlist.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="206">
@@ -290,10 +245,17 @@
     <entry file="file://$PROJECT_DIR$/resources/sampleACAD.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/1million.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="690644" column="10" selection-start-line="690644" selection-end-line="690644" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/collections/Input.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="36" column="34" lean-forward="true" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
+        <state relative-caret-position="365">
+          <caret line="36" column="34" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -302,7 +264,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/collections/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
+        <state relative-caret-position="535">
           <caret line="71" column="55" selection-start-line="71" selection-start-column="55" selection-end-line="71" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -310,17 +272,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/1million.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="690644" column="10" selection-start-line="690644" selection-end-line="690644" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/collections/CollectionExercises.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="57" lean-forward="true" selection-start-line="14" selection-start-column="57" selection-end-line="14" selection-end-column="57" />
+        <state relative-caret-position="476">
+          <caret line="121" column="78" lean-forward="true" selection-start-line="121" selection-start-column="78" selection-end-line="121" selection-end-column="78" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

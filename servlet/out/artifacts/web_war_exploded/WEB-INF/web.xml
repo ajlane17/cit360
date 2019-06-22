@@ -17,6 +17,12 @@
         <servlet-name>HelloWorldHtml</servlet-name>
         <servlet-class>com.adrianjlane.servlet.HelloWorldHtml</servlet-class>
     </servlet>
+    <servlet>
+        <description></description>
+        <display-name>ParamsExample</display-name>
+        <servlet-name>ParamsExample</servlet-name>
+        <servlet-class>com.adrianjlane.servlet.ParamsExample</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>HelloWorldConsole</servlet-name>
         <url-pattern>/HelloWorldConsole</url-pattern>
@@ -24,6 +30,10 @@
     <servlet-mapping>
         <servlet-name>HelloWorldHtml</servlet-name>
         <url-pattern>/HelloWorldHtml</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ParamsExample</servlet-name>
+        <url-pattern>/ParamsExample</url-pattern>
     </servlet-mapping>
 
 </web-app>

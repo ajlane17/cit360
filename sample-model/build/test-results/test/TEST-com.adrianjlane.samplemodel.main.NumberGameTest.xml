@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.adrianjlane.samplemodel.main.NumberGameTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2019-06-15T22:56:59" hostname="aj-manjaro" time="0.023">
+  <properties/>
+  <testcase name="validateReturnNumber" classname="com.adrianjlane.samplemodel.main.NumberGameTest" time="0.004"/>
+  <testcase name="validateListPropertyNotNull" classname="com.adrianjlane.samplemodel.main.NumberGameTest" time="0.0"/>
+  <testcase name="validateStringArraysEqual" classname="com.adrianjlane.samplemodel.main.NumberGameTest" time="0.004"/>
+  <testcase name="validateNumgerGameObjectsEqual" classname="com.adrianjlane.samplemodel.main.NumberGameTest" time="0.0"/>
+  <testcase name="validateListPropertyIsNull" classname="com.adrianjlane.samplemodel.main.NumberGameTest" time="0.001"/>
+  <testcase name="validateNumberGameSame" classname="com.adrianjlane.samplemodel.main.NumberGameTest" time="0.0"/>
+  <testcase name="validateBoolPropertyTrue" classname="com.adrianjlane.samplemodel.main.NumberGameTest" time="0.0"/>
+  <testcase name="validateNumberGameNotSame" classname="com.adrianjlane.samplemodel.main.NumberGameTest" time="0.001"/>
+  <testcase name="validateBoolPropertyFalse" classname="com.adrianjlane.samplemodel.main.NumberGameTest" time="0.0"/>
+  <testcase name="validateReturnNumberError" classname="com.adrianjlane.samplemodel.main.NumberGameTest" time="0.012"/>
+  <testcase name="validateNumgerGameObjectsNotEqual" classname="com.adrianjlane.samplemodel.main.NumberGameTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

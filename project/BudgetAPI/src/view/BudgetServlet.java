@@ -3,6 +3,8 @@ package view;
 import com.google.gson.Gson;
 import controller.AddCategoryHandler;
 import controller.BudgetController;
+import controller.DeleteCategoryHandler;
+import controller.GetCategoryHandler;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -13,6 +15,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @WebServlet(name = "BudgetServlet")
 public class BudgetServlet extends HttpServlet {
@@ -21,8 +24,10 @@ public class BudgetServlet extends HttpServlet {
     Gson gson = new Gson();
 
     public void init() {
-        // map commands go here
+        // Command mappings
         budgetController.mapCommand("addCategory", new AddCategoryHandler());
+        budgetController.mapCommand("getCategory", new GetCategoryHandler());
+        budgetController.mapCommand("deleteCategory", new DeleteCategoryHandler());
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -40,6 +45,12 @@ public class BudgetServlet extends HttpServlet {
             String jsonParams = gson.toJson(request.getParameterMap());
 
             HashMap<String, Object> dataMap = gson.fromJson(jsonParams, HashMap.class);
+
+            if ("POST".equalsIgnoreCase(request.getMethod())) {
+                String requestBody = request.getReader().lines().collect(Collectors.joining(System.lineSeparator()));
+                dataMap.putAll(gson.fromJson(requestBody, HashMap.class));
+            }
+
             System.out.println("dataMap to string: " + dataMap.toString());
 
             List<String> command = (ArrayList<String>) dataMap.get("command");

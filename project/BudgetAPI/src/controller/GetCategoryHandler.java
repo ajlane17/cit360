@@ -4,44 +4,43 @@ import com.google.gson.Gson;
 import model.Category;
 import model.CategoryDao;
 
-import javax.persistence.PersistenceException;
 import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
+import java.util.List;
 
-public class AddCategoryHandler implements BudgetHandler {
+public class GetCategoryHandler implements BudgetHandler {
 
+    Gson gson = new Gson();
     String responseBody = "";
+    Category category;
     CategoryDao categoryDao;
 
     @Override
     public void execute(HashMap<String, Object> data, HttpServletResponse response) {
         try {
-            System.out.println("AddCategoryHandler executing...");
+            System.out.println("GetCategoryHandler executing...");
+            System.out.println("Parsing request...");
 
-            System.out.println("Parsing request body...");
+            Long categoryId = Long.valueOf(((List<String>) data.get("categoryId")).get(0));
 
-            String categoryName = (String) data.get("categoryName");
-            double categoryBudget = (double) data.get("categoryBudget");
-
-            Category category = new Category();
-            category.setName(categoryName);
-            category.setBudget(categoryBudget);
-
-            System.out.println("Adding category: " + category.toString());
+            System.out.println("Fetching category: " + categoryId);
 
             categoryDao = new CategoryDao();
+            category = categoryDao.get(categoryId);
 
-            categoryDao.save(category);
+            if (category == null) {
+                throw new IllegalArgumentException("Category not found");
+            }
 
-            responseBody = "Added category: " + category.toString();
+            responseBody = gson.toJson(category, Category.class);
 
         } catch (NullPointerException e) {
             System.out.println("Request not properly formatted, received: " + data.toString());
             responseBody = "Request not properly formatted, received: " + data.toString();
             response.setStatus(500);
         } catch (Exception e) {
-            System.out.println("Error received while creating category: " + e.getMessage());
-            responseBody = "Error received while creating category: " + e.getMessage();
+            System.out.println("Error received while fetching category: " + e.getMessage());
+            responseBody = "Error received while fetching category: " + e.getMessage();
             response.setStatus(500);
         }
 

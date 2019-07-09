@@ -1,47 +1,49 @@
 package controller;
 
-import com.google.gson.Gson;
 import model.Category;
 import model.CategoryDao;
 
-import javax.persistence.PersistenceException;
 import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
+import java.util.List;
 
-public class AddCategoryHandler implements BudgetHandler {
+public class DeleteCategoryHandler implements BudgetHandler {
 
     String responseBody = "";
     CategoryDao categoryDao;
+    Category category;
 
     @Override
     public void execute(HashMap<String, Object> data, HttpServletResponse response) {
         try {
-            System.out.println("AddCategoryHandler executing...");
-
+            System.out.println("DeleteCategoryHandler executing...");
             System.out.println("Parsing request body...");
 
-            String categoryName = (String) data.get("categoryName");
-            double categoryBudget = (double) data.get("categoryBudget");
+            Long categoryId = ((Double) data.get("categoryId")).longValue();
 
-            Category category = new Category();
-            category.setName(categoryName);
-            category.setBudget(categoryBudget);
-
-            System.out.println("Adding category: " + category.toString());
+            System.out.println("Fetching category: " + categoryId);
 
             categoryDao = new CategoryDao();
 
-            categoryDao.save(category);
+            category = categoryDao.get(categoryId);
 
-            responseBody = "Added category: " + category.toString();
+            if (category == null) {
+                throw new IllegalArgumentException("Category not found");
+            }
+
+            System.out.println("Deleting: " + category.toString());
+
+            categoryDao.delete(category);
+
+            responseBody = "Deleted category: " + categoryId;
 
         } catch (NullPointerException e) {
             System.out.println("Request not properly formatted, received: " + data.toString());
             responseBody = "Request not properly formatted, received: " + data.toString();
             response.setStatus(500);
         } catch (Exception e) {
-            System.out.println("Error received while creating category: " + e.getMessage());
-            responseBody = "Error received while creating category: " + e.getMessage();
+            System.out.println("Error received while deleting category: " + e.getMessage());
+            responseBody = "Error received while deleting category: " + e.getMessage();
             response.setStatus(500);
         }
 

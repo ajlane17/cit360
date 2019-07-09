@@ -3,22 +3,26 @@ package model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "categories")
+@Table(name = "categories",
+        uniqueConstraints = {
+            @UniqueConstraint(columnNames = "name")
+        })
 public class Category {
-    private long id;
+    private Long id;
     private String name;
-    private float budget;
+    private double budget;
 
     public Category() {
     }
 
     @Id
     @Column(name = "id")
-    public long getId() {
+    @GeneratedValue(strategy=GenerationType.SEQUENCE)
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -34,11 +38,20 @@ public class Category {
 
     @Basic
     @Column(name = "budget")
-    public float getBudget() {
+    public double getBudget() {
         return budget;
     }
 
-    public void setBudget(float budget) {
+    public void setBudget(double budget) {
         this.budget = budget;
+    }
+
+    @Override
+    public String toString() {
+        return "Category{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", budget=" + budget +
+                '}';
     }
 }

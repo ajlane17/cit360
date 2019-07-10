@@ -1,11 +1,10 @@
-package controller;
+package service;
 
-import model.Category;
-import model.CategoryDao;
+import entity.Category;
+import dao.CategoryDao;
 
 import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
-import java.util.List;
 
 public class DeleteCategoryHandler implements BudgetHandler {
 

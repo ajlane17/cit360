@@ -1,8 +1,9 @@
-package model;
+package dao;
 
+import entity.Category;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import service.HibernateUtil;
+import util.HibernateUtil;
 
 import java.util.List;
 
@@ -40,7 +41,7 @@ public class CategoryDao implements Dao<Category> {
         try {
             session = HibernateUtil.getSession();
             transaction = session.beginTransaction();
-            categories = session.createQuery("from Category").list();
+            categories = (List<Category>) session.createQuery("from Category").list();
             transaction.commit();
         } catch (Exception e) {
             transaction.rollback();
@@ -75,12 +76,8 @@ public class CategoryDao implements Dao<Category> {
     public void update(Category category) {
         try {
             session = HibernateUtil.getSession();
-            transaction = session.beginTransaction();
-            Category updatedCategory = new Category();
-            updatedCategory.setId(category.getId());
-            updatedCategory.setName(category.getName());
-            updatedCategory.setBudget(category.getBudget());
-            session.update(updatedCategory);
+            transaction = session.beginTransaction();;
+            session.update(category);
             transaction.commit();
         } catch (Exception e) {
             transaction.rollback();

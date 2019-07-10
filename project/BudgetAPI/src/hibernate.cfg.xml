@@ -15,7 +15,7 @@
         <property name="hibernate.hbm2ddl.auto">update</property>
 
         <!-- Table Mappings -->
-        <mapping class="model.Expense"/>
-        <mapping class="model.Category"/>
+        <mapping class="entity.Expense"/>
+        <mapping class="entity.Category"/>
     </session-factory>
 </hibernate-configuration>

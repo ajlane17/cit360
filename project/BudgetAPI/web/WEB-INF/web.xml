@@ -8,7 +8,7 @@
         <description></description>
         <display-name>test</display-name>
         <servlet-name>test</servlet-name>
-        <servlet-class>view.BudgetServlet</servlet-class>
+        <servlet-class>BudgetServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>

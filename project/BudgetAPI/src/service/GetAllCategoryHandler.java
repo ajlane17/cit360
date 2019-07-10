@@ -1,43 +1,38 @@
-package controller;
+package service;
 
 import com.google.gson.Gson;
-import model.Category;
-import model.CategoryDao;
+import com.google.gson.reflect.TypeToken;
+import entity.Category;
+import dao.CategoryDao;
 
 import javax.servlet.http.HttpServletResponse;
+import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.List;
 
-public class GetCategoryHandler implements BudgetHandler {
+public class GetAllCategoryHandler implements BudgetHandler {
 
     Gson gson = new Gson();
     String responseBody = "";
-    Category category;
+    List<Category> categories;
     CategoryDao categoryDao;
 
     @Override
     public void execute(HashMap<String, Object> data, HttpServletResponse response) {
         try {
-            System.out.println("GetCategoryHandler executing...");
+            System.out.println("GetAllCategoryHandler executing...");
             System.out.println("Parsing request...");
 
-            Long categoryId = Long.valueOf(((List<String>) data.get("categoryId")).get(0));
-
-            System.out.println("Fetching category: " + categoryId);
+            System.out.println("Fetching categories...");
 
             categoryDao = new CategoryDao();
-            category = categoryDao.get(categoryId);
+            categories = categoryDao.getAll();
 
-            if (category == null) {
-                throw new IllegalArgumentException("Category not found");
+            if (categories != null) {
+                Type listType = new TypeToken<List<Category>>() {}.getType();
+                responseBody = gson.toJson(categories, listType);
             }
 
-            responseBody = gson.toJson(category, Category.class);
-
-        } catch (NullPointerException e) {
-            System.out.println("Request not properly formatted, received: " + data.toString());
-            responseBody = "Request not properly formatted, received: " + data.toString();
-            response.setStatus(500);
         } catch (Exception e) {
             System.out.println("Error received while fetching category: " + e.getMessage());
             responseBody = "Error received while fetching category: " + e.getMessage();

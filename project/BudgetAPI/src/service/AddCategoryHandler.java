@@ -1,10 +1,8 @@
-package controller;
+package service;
 
-import com.google.gson.Gson;
-import model.Category;
-import model.CategoryDao;
+import entity.Category;
+import dao.CategoryDao;
 
-import javax.persistence.PersistenceException;
 import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
 

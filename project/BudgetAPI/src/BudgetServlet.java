@@ -1,10 +1,6 @@
-package view;
-
 import com.google.gson.Gson;
-import controller.AddCategoryHandler;
-import controller.BudgetController;
-import controller.DeleteCategoryHandler;
-import controller.GetCategoryHandler;
+import controller.*;
+import service.*;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -28,6 +24,8 @@ public class BudgetServlet extends HttpServlet {
         budgetController.mapCommand("addCategory", new AddCategoryHandler());
         budgetController.mapCommand("getCategory", new GetCategoryHandler());
         budgetController.mapCommand("deleteCategory", new DeleteCategoryHandler());
+        budgetController.mapCommand("getAllCategories", new GetAllCategoryHandler());
+        budgetController.mapCommand("updateCategory", new UpdateCategoryHandler());
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

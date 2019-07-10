@@ -1,14 +1,14 @@
 package entity;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
+import java.util.Date;
 
 @Entity
 @Table(name = "expenses")
 public class Expense {
-    private long id;
-    private LocalDateTime time;
-    private float amount;
+    private Long id;
+    private Date date;
+    private double amount;
     private long categoryId;
     private String merchant;
 
@@ -17,31 +17,32 @@ public class Expense {
 
     @Id
     @Column(name = "id")
-    public long getId() {
+    @GeneratedValue(strategy=GenerationType.SEQUENCE)
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
     @Basic
-    @Column(name = "time")
-    public LocalDateTime getTime() {
-        return time;
+    @Column(name = "date")
+    public Date getDate() {
+        return date;
     }
 
-    public void setTime(LocalDateTime time) {
-        this.time = time;
+    public void setDate(Date date) {
+        this.date = date;
     }
 
     @Basic
     @Column(name = "amount")
-    public float getAmount() {
+    public double getAmount() {
         return amount;
     }
 
-    public void setAmount(float amount) {
+    public void setAmount(double amount) {
         this.amount = amount;
     }
 
@@ -63,5 +64,16 @@ public class Expense {
 
     public void setMerchant(String merchant) {
         this.merchant = merchant;
+    }
+
+    @Override
+    public String toString() {
+        return "Expense{" +
+                "id=" + id +
+                ", date=" + date +
+                ", amount=" + amount +
+                ", categoryId=" + categoryId +
+                ", merchant='" + merchant + '\'' +
+                '}';
     }
 }

@@ -26,6 +26,11 @@ public class BudgetServlet extends HttpServlet {
         budgetController.mapCommand("deleteCategory", new DeleteCategoryHandler());
         budgetController.mapCommand("getAllCategories", new GetAllCategoryHandler());
         budgetController.mapCommand("updateCategory", new UpdateCategoryHandler());
+        budgetController.mapCommand("addExpense", new AddExpenseHandler());
+        budgetController.mapCommand("getAllExpenses", new GetAllExpenseHandler());
+        budgetController.mapCommand("getExpense", new GetExpenseHandler());
+        budgetController.mapCommand("updateExpense", new UpdateExpenseHandler());
+        budgetController.mapCommand("deleteExpense", new DeleteExpenseHandler());
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

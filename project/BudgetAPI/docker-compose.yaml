@@ -1,0 +1,6 @@
+version: '3'
+services:
+  budgetapi:
+    image: "ajlane.azurecr.io/budgetapi:1.0"
+    ports:
+      - "82:8080"

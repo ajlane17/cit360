@@ -1,6 +1,7 @@
 package entity;
 
 import javax.persistence.*;
+import java.util.Objects;
 
 @Entity
 @Table(name = "categories",
@@ -53,5 +54,20 @@ public class Category {
                 ", name='" + name + '\'' +
                 ", budget=" + budget +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Category category = (Category) o;
+        return Double.compare(category.budget, budget) == 0 &&
+                Objects.equals(id, category.id) &&
+                Objects.equals(name, category.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, budget);
     }
 }

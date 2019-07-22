@@ -1,11 +1,7 @@
-package entity;
+package com.adrianjlane.expensetracker.model;
 
-import javax.persistence.*;
 import java.util.Date;
-import java.util.Objects;
 
-@Entity
-@Table(name = "expenses")
 public class Expense {
     private Long id;
     private Date date;
@@ -13,12 +9,6 @@ public class Expense {
     private long categoryId;
     private String merchant;
 
-    public Expense() {
-    }
-
-    @Id
-    @Column(name = "id")
-    @GeneratedValue(strategy=GenerationType.SEQUENCE)
     public Long getId() {
         return id;
     }
@@ -27,8 +17,6 @@ public class Expense {
         this.id = id;
     }
 
-    @Basic
-    @Column(name = "date")
     public Date getDate() {
         return date;
     }
@@ -37,8 +25,6 @@ public class Expense {
         this.date = date;
     }
 
-    @Basic
-    @Column(name = "amount")
     public double getAmount() {
         return amount;
     }
@@ -47,8 +33,6 @@ public class Expense {
         this.amount = amount;
     }
 
-    @Basic
-    @Column(name = "category_id")
     public long getCategoryId() {
         return categoryId;
     }
@@ -57,8 +41,6 @@ public class Expense {
         this.categoryId = categoryId;
     }
 
-    @Basic
-    @Column(name = "merchant")
     public String getMerchant() {
         return merchant;
     }
@@ -69,29 +51,12 @@ public class Expense {
 
     @Override
     public String toString() {
-        return "Expense{" +
+        return "Category{" +
                 "id=" + id +
                 ", date=" + date +
                 ", amount=" + amount +
                 ", categoryId=" + categoryId +
                 ", merchant='" + merchant + '\'' +
                 '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Expense expense = (Expense) o;
-        return Double.compare(expense.amount, amount) == 0 &&
-                categoryId == expense.categoryId &&
-                Objects.equals(id, expense.id) &&
-                Objects.equals(date, expense.date) &&
-                Objects.equals(merchant, expense.merchant);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, date, amount, categoryId, merchant);
     }
 }

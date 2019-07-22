@@ -50,7 +50,7 @@ public class GetCategoryHandler implements BudgetHandler {
             response.getWriter().close();
 
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            System.out.println("Error: "+ e.getMessage());
             e.printStackTrace();
         }
     }

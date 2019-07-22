@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ExpenseTracker</string>
+    <string name="main_title">Expense Tracker</string>
+    <string name="manage_expenses_btn">Manage Expenses</string>
+    <string name="manage_categories_btn">Manage Categories</string>
+    <string name="add_category_label">Add Category</string>
+    <string name="add_expense_label">Add Expense</string>
+    <string name="category_label">Category</string>
+    <string name="budget_label">Budget</string>
+</resources>
